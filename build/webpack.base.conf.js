@@ -14,11 +14,11 @@ const pageSettings = srcConfig.pageSettings || {}
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const extractCSS = new ExtractTextPlugin({
-  filename: 'assets/css/[name].css',
+  filename: './src/common/css/[name].css',
   allChunks: true
 })
 const extractLESS = new ExtractTextPlugin({
-  filename: 'assets/css/[name].css',
+  filename: './src/common/css/[name].less',
   allChunks: true
 })
 
@@ -38,11 +38,11 @@ glob.sync('./src/pages/**/app.js').forEach(path => {
     chunk: chunk, // 用于自定义组件
     template: './src/app.html',
     inject: 'body',
-    favicon: './src/assets/img/logo.png',
+    favicon: './src/common/img/logo.png',
     hash: true,
     chunks: ['commons', chunk]
   }
-  console.log(htmlConf)
+  // console.log(htmlConf)
   htmlWebpackPluginArray.push(new HtmlWebpackPlugin(htmlConf))
 })
 
@@ -66,10 +66,7 @@ MyPlugin.prototype.apply = function (compiler) {
     )
   })
 }
-
 // html 处理end
-
-
 const styleLoaderOptions = {
   loader: 'style-loader',
   options: {

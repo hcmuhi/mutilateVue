@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="d-body">
     <div class="aaa">1111</div>
     <el-card class="login-card">
       <div slot="header">
@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import logo from 'assets/img/logo.png'
+import logo from '@/common/img/logo.png'
 
 export default {
-  data () {
+  data() {
     return {
       logo: logo,
       form: {
@@ -51,14 +51,14 @@ export default {
   },
   /** ***************************初始化 end*************************** **/
   /** *************************生命周期 start************************* **/
-  mounted () {
+  mounted() {
     this.fetchDetail()
   },
   /** **************************生命周期 end************************** **/
   methods: {
     // -----增删改查 start-----
-    fetchDetail () {
-      let data = {
+    fetchDetail() {
+      const data = {
         comNo: '10021'
       }
       // TODO: 查询接口
@@ -79,38 +79,38 @@ export default {
           }
         })
     },
-    save () {
+    save() {
       // this.$refs['form'].validate((valid) => {
       //   if (valid) {
-          // console.log(this.form)
-          // TODO: 其他校验
-          if (this.loading) return
-          this.loading = true
-          let apiUrl = '/api/biz/client/findCompanyByComNo'
-          if (this.dataId) {
-            apiUrl = '/api/biz/client/findCompanyByComNo'
-          }
-          // TODO: 保存接口
-          this.$http.post(apiUrl, this.form)
-            .then(res => {
-              this.loading = false
-              if (res.retCode === 0) {
-                this.editStatus = false
-                this.callback({
-                  reload: true,
-                  visible: false
-                })
-                this.$message({
-                  message: this.dataId ? '保存成功' : '新增成功',
-                  type: 'success'
-                })
-              } else {
-                this.$message({
-                  message: res.errMsg,
-                  type: 'warning'
-                })
-              }
+      // console.log(this.form)
+      // TODO: 其他校验
+      if (this.loading) return
+      this.loading = true
+      let apiUrl = '/api/biz/client/findCompanyByComNo'
+      if (this.dataId) {
+        apiUrl = '/api/biz/client/findCompanyByComNo'
+      }
+      // TODO: 保存接口
+      this.$http.post(apiUrl, this.form)
+        .then(res => {
+          this.loading = false
+          if (res.retCode === 0) {
+            this.editStatus = false
+            this.callback({
+              reload: true,
+              visible: false
             })
+            this.$message({
+              message: this.dataId ? '保存成功' : '新增成功',
+              type: 'success'
+            })
+          } else {
+            this.$message({
+              message: res.errMsg,
+              type: 'warning'
+            })
+          }
+        })
         // } else {
         //   console.log('error submit!!')
         //   return false
