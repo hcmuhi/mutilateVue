@@ -3,7 +3,7 @@
     <div class="aaa">1111</div>
     <el-card class="login-card">
       <div slot="header">
-        <img :src="logo" class="logo-img">
+        <img src="@/assets/img/logo.png" class="logo-img">
         <span class="logo-text">Management System</span>
       </div>
       <el-form class="login" label-width="100px" >
@@ -22,12 +22,10 @@
 </template>
 
 <script>
-import logo from '@/common/img/logo.png'
 
 export default {
   data() {
     return {
-      logo: logo,
       form: {
         phone: '',
         password: ''
