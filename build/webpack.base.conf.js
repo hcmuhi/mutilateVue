@@ -60,7 +60,7 @@ MyPlugin.prototype.apply = function (compiler) {
       (data, cb) => {
         const page = data.plugin.options.chunk.replace(/\/|\\/g, '_');
         data.html = renderString(data.html, pageSettings[page] || pageSettings.defult || {});
-
+        console.log(page)
         cb(null, data)
       }
     )

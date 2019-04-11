@@ -12,7 +12,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     noInfo: true,
     proxy: {
       '/api': {
-        target: 'http://http://wl.kafu56.com/api',
+        target: 'http://wl.kafu56.com/api',
         changeOrigin: true,
         pathRewrite: { '^/api': '' }
       }
