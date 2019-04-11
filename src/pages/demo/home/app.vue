@@ -1,23 +1,10 @@
 <template>
   <div class="d-body">
-    <div class="aaa animated bounceInLeft">1111</div>
-    <el-card class="login-card">
-      <div slot="header">
-        <img src="@/assets/img/logo.png" class="logo-img">
-        <span class="logo-text">Management System</span>
-      </div>
-      <el-form class="login" label-width="100px" >
-        <el-form-item label="Phone">
-          <el-input placeholder="Please enter phone number" v-model="form.phone" type="tel" :maxlength="11"></el-input>
-        </el-form-item>
-        <el-form-item label="Password">
-          <el-input placeholder="Please enter password" v-model="form.password" type="password" @keyup.enter="login"></el-input>
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" @click="save">Login</el-button>
-        </el-form-item>
-      </el-form>
-    </el-card>
+    <div class="d-top"></div>
+    <div class="d-container">
+      <img src="@/assets/img/logo.png" class="d-img">
+      <div class="d-con animated bounceInLeft">hello world</div>
+    </div>
   </div>
 </template>
 
@@ -123,25 +110,8 @@ export default {
 </script>
 
 <style>
-  .aaa {
+  .d-con {
     width: 7.5rem;
     height: 7.5rem;
-    background-color: aqua;
-    font-size: 0.18rem;
-  }
-  .login-card {
-    width: 800px;
-    margin: 100px auto;
-  }
-  .login {
-    display: block;
-    width: 400px;
-    margin: 100px auto;
-  }
-  .logo-img {
-    width: 90px;
-  }
-  .logo-text {
-    margin-left: 20px;
   }
 </style>
