@@ -10,6 +10,7 @@
     "build": "webpack --mode production --progress --config build/webpack.prod.conf.js"
   },
   "dependencies": {
+    "animate.css": "^3.7.0",
     "axios": "^0.17.1",
     "vue": "^2.5.16"
   },

@@ -1,6 +1,6 @@
 <template>
   <div class="d-body">
-    <div class="aaa">1111</div>
+    <div class="aaa animated bounceInLeft">1111</div>
     <el-card class="login-card">
       <div slot="header">
         <img src="@/assets/img/logo.png" class="logo-img">
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import 'animate.css'
 
 export default {
   data() {
