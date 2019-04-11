@@ -15,12 +15,12 @@
   }
   setBodyFontSize();
 
-  // set 1rem = viewWidth / 1920；
+  // set 1rem
   // 1080 为界
-  // 1920 设计稿 750设计稿 1rem=1px
+  // 1920 设计稿 750设计稿 1rem = 100px
   function setRemUnit () {
-    var rem = docEl.clientWidth / 1920
-    if (docEl.clientWidth < 1080) rem = docEl.clientWidth / 750
+    var rem = docEl.clientWidth / 19.2
+    if (docEl.clientWidth < 1080) rem = docEl.clientWidth / 7.5
     docEl.style.fontSize = rem + 'px'
   }
 

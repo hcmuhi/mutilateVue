@@ -110,8 +110,15 @@ export default {
 </script>
 
 <style>
-  .d-con {
+  .d-top {
     width: 7.5rem;
-    height: 7.5rem;
+    margin: 0 auto;
+  }
+  .d-container {
+    width: 7.5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 </style>
